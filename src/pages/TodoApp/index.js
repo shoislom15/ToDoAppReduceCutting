@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
+
 import "../../App.css";
 import List from "../../components/List";
 import Header from "../../components/Header";
@@ -42,9 +43,9 @@ export default function TodoApp() {
 
       <Header theme={layout.theme} />
 
-      <h1 className="text-5xl text-center mb-10">Todo App</h1>
+      <h1 className="text-3xl text-left mt-6 font-medium text-boardTitle">Board</h1>
 
-      <div className="flex overflow-x-auto gap-4 csrollBar">
+      <div className="flex overflow-x-auto gap-4 scroll">
         {
           lists.map((list, il) => {
 

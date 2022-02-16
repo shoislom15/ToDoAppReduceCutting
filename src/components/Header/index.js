@@ -1,7 +1,11 @@
-import { BsMoonStars, BsSun } from "react-icons/bs";
 import { dispatch } from "../../redux";
+import { BsMoonStars, BsSun } from "react-icons/bs"
+import { useSelector } from "react-redux";
 
-const Header = (theme) => {
+const Header = () => {
+
+    const theme = useSelector((state) => state.layout.theme)
+
     return (
         <header>
             <button
