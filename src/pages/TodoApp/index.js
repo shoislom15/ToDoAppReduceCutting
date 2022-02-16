@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
@@ -6,15 +6,23 @@ import { useSelector } from "react-redux";
 import "../../App.css";
 import List from "../../components/List";
 import Header from "../../components/Header";
+import { BsPlusLg } from "react-icons/bs";
 
 export default function TodoApp() {
-  const layout = useSelector((state) => state.layout);
+  const layout = useSelector((state) => state.LayoutControl);
 
-  const lists = useSelector((state) => state.lists);
+  const [listTitle, setListTitle] = useState("");
+
+  const lists = useSelector((state) => state.DataControl.lists);
 
   console.log(lists);
 
   const dispatch = useDispatch();
+
+  const addList = () => {
+    dispatch({ type: "ADD_LIST", payload: { listTitle } });
+    setListTitle("")
+  }
 
 
   const addTask = (i, value, callback) => {
@@ -43,7 +51,7 @@ export default function TodoApp() {
 
       <Header theme={layout.theme} />
 
-      <h1 className="text-3xl text-left mt-6 font-medium text-boardTitle">Board</h1>
+      <h1 className="text-3xl text-left mt-6 font-medium dark:text-fff">Board</h1>
 
       <div className="flex overflow-x-auto gap-4 scroll">
         {
@@ -54,6 +62,18 @@ export default function TodoApp() {
             )
           })
         }
+      </div>
+      <div className="w-80 mt-5 rounded-xl border p-3" style={{ backgroundColor: "#F3F7F8" }}>
+        <div className="flex flex-1 items-center rounded-md px-2" style={{ backgroundColor: "#E8F1F1" }}>
+          <input
+            className="border-0 flex-1 rounded-lg px-3 py-2  mr-2 outline-none bg-transparent transition-all"
+            type="text"
+            value={listTitle}
+            placeholder="New List here"
+            onChange={(e) => setListTitle(e.target.value)}
+          />
+          <button className="py-1 px-4 rounded-md bg-plus text-fff" onClick={() => addList()}><BsPlusLg /></button>
+        </div>
       </div>
     </div>
   );

@@ -17,3 +17,19 @@
 .scroll::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.task:hover .btns{
+  display: flex;
+}
+
+.transition2{
+  transition: 1.5s;
+  transition-delay: 0.5;
+}
+
+.transition1 {
+  transition-duration: 1.5s;
+  transform: translateX(-150%) scale(0.7);
+  /* transform: rotateY(-100%); */
+
+}
