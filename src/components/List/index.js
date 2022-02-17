@@ -16,7 +16,7 @@ const List = ({ list, addTask, i }) => {
     }
 
     return (
-        <div className="max-w-full mx-auto mt-5 rounded-xl p-3" style={{ backgroundColor: "#F3F7F8", borderLeft: `3px solid black` }}>
+        <div className="max-w-full mr-2 w-full  mt-5 rounded-xl p-3" style={{ backgroundColor: "#F3F7F8", borderLeft: `3px solid black` }}>
             <p className="font-medium mb-2">{list.title}</p>
             <div className="flex flex-1 items-center rounded-md px-2" style={{ backgroundColor: "#E8F1F1" }}>
                 <input

@@ -53,7 +53,7 @@ export default function TodoApp() {
 
       <h1 className="text-3xl text-left mt-6 font-medium dark:text-fff">Board</h1>
 
-      <div className="flex overflow-x-auto gap-4 scroll">
+      <div className="flex flex-wrap sm:flex-nowrap justify-start overflow-x-auto scroll">
         {
           lists.map((list, il) => {
 
