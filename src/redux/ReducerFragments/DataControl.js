@@ -56,6 +56,50 @@ const initialState = {
                 }
             ]
         },
+    ],
+    boards: [
+        {
+            boardTitle: "Board 01",
+            lists: [
+                {
+                    title: "List 01",
+                    tasks: [
+                        {
+                            title: "Task 01",
+                            completed: false,
+                        }
+                    ]
+                },
+                {
+                    title: "List 01",
+                    tasks: [
+                        {
+                            title: "Task 01",
+                            completed: false,
+                        }
+                    ]
+                },
+                {
+                    title: "List 01",
+                    tasks: [
+                        {
+                            title: "Task 01",
+                            completed: false,
+                        }
+                    ]
+                },
+                {
+                    title: "List 01",
+                    tasks: [
+                        {
+                            title: "Task 01",
+                            completed: false,
+                        }
+                    ]
+                },
+
+            ],
+        }
     ]
 };
 

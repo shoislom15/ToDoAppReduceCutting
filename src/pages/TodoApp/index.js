@@ -63,10 +63,10 @@ export default function TodoApp() {
           })
         }
       </div>
-      <div className="w-80 mt-5 rounded-xl border p-3" style={{ backgroundColor: "#F3F7F8" }}>
+      <div className="max-w-full w-80  mt-5 rounded-xl border p-3" style={{ backgroundColor: "#F3F7F8" }}>
         <div className="flex flex-1 items-center rounded-md px-2" style={{ backgroundColor: "#E8F1F1" }}>
           <input
-            className="border-0 flex-1 rounded-lg px-3 py-2  mr-2 outline-none bg-transparent transition-all"
+            className="border-0 flex-1 w-full rounded-lg px-3 py-2  mr-2 outline-none bg-transparent transition-all"
             type="text"
             value={listTitle}
             placeholder="New List here"
