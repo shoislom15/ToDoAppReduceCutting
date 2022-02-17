@@ -1,9 +1,5 @@
-import { faEdit } from "@fortawesome/free-regular-svg-icons";
-import { faCheck, faTimes, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
-import { useDispatch } from "react-redux";
 import Button from "../../components/Button";
 import Task from "../Task";
 
